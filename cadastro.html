@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se como voluntário ou doador no Instituto Esperança. Faça parte da transformação social.">
+    <title>Cadastro - Instituto Esperança</title>
+</head>
+<body>
+    <!-- Cabeçalho Principal -->
+    <header>
+        <nav>
+            <img src="imagens/logo.jpg" alt="Logo Instituto Esperança" width="150">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Banner da Página -->
+        <section>
+            <h1>Cadastre-se</h1>
+            <img src="imagens/banner-cadastro.jpg" alt="Pessoas trabalhando juntas" width="900">
+            <p>Junte-se a nós! Preencha o formulário abaixo para se cadastrar como voluntário ou para receber informações sobre como apoiar nossos projetos.</p>
+        </section>
+
+        <!-- Formulário de Cadastro -->
+        <section>
+            <h2>Formulário de Cadastro</h2>
+            <img src="imagens/formulario-icon.jpg" alt="Ícone de formulário" width="150">
+            
+            <form id="formCadastro">
+                <!-- Dados Pessoais -->
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <label for="nome">Nome Completo *</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        placeholder="Digite seu nome completo"
+                        required
+                        minlength="3"
+                        maxlength="100">
+
+                    <label for="email">E-mail *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="seuemail@exemplo.com"
+                        required>
+
+                    <label for="cpf">CPF *</label>
+                    <input 
+                        type="text" 
+                        id="cpf" 
+                        name="cpf" 
+                        placeholder="000.000.000-00"
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                        title="Digite o CPF no formato: 000.000.000-00"
+                        required
+                        maxlength="14">
+
+                    <label for="telefone">Telefone *</label>
+                    <input 
+                        type="tel" 
+                        id="telefone" 
+                        name="telefone" 
+                        placeholder="(00) 00000-0000"
+                        pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                        title="Digite o telefone no formato: (00) 00000-0000"
+                        required
+                        maxlength="15">
+
+                    <label for="dataNascimento">Data de Nascimento *</label>
+                    <input 
+                        type="date" 
+                        id="dataNascimento" 
+                        name="dataNascimento" 
+                        required
+                        min="1900-01-01"
+                        max="2010-12-31">
+                </fieldset>
+
+                <!-- Endereço -->
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <label for="cep">CEP *</label>
+                    <input 
+                        type="text" 
+                        id="cep" 
+                        name="cep" 
+                        placeholder="00000-000"
+                        pattern="\d{5}-\d{3}"
+                        title="Digite o CEP no formato: 00000-000"
+                        required
+                        maxlength="9">
+
+                    <label for="endereco">Endereço Completo *</label>
+                    <input 
+                        type="text" 
+                        id="endereco" 
+                        name="endereco" 
+                        placeholder="Rua, número e complemento"
+                        required
+                        maxlength="200">
+
+                    <label for="cidade">Cidade *</label>
+                    <input 
+                        type="text" 
+                        id="cidade" 
+                        name="cidade" 
+                        placeholder="Digite sua cidade"
+                        required
+                        maxlength="100">
+
+                    <label for="estado">Estado *</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione seu estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </fieldset>
+
+                <!-- Interesse -->
+                <fieldset>
+                    <legend>Como deseja participar?</legend>
+
+                    <label for="interesse">Tipo de Participação *</label>
+                    <select id="interesse" name="interesse" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="voluntario">Quero ser Voluntário</option>
+                        <option value="doador">Quero fazer Doações</option>
+                        <option value="ambos">Voluntário e Doador</option>
+                        <option value="parceiro">Parceria Empresarial</option>
+                        <option value="informacoes">Apenas receber informações</option>
+                    </select>
+
+                    <label for="areaInteresse">Área de Interesse (para voluntários)</label>
+                    <select id="areaInteresse" name="areaInteresse">
+                        <option value="">Selecione uma área</option>
+                        <option value="educacao">Educação</option>
+                        <option value="capacitacao">Capacitação Profissional</option>
+                        <option value="saude">Saúde</option>
+                        <option value="assistencia">Assistência Social</option>
+                        <option value="eventos">Apoio em Eventos</option>
+                        <option value="comunicacao">Comunicação e Marketing</option>
+                        <option value="administracao">Administração e Gestão</option>
+                        <option value="ti">Tecnologia da Informação</option>
+                    </select>
+
+                    <label for="disponibilidade">Disponibilidade (para voluntários)</label>
+                    <select id="disponibilidade" name="disponibilidade">
+                        <option value="">Selecione sua disponibilidade</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                        <option value="fds">Finais de semana</option>
+                        <option value="flexivel">Horário flexível</option>
+                    </select>
+
+                    <label for="experiencia">Experiência/Qualificações</label>
+                    <textarea 
+                        id="experiencia" 
+                        name="experiencia" 
+                        rows="5" 
+                        placeholder="Conte-nos sobre sua experiência profissional, formação acadêmica ou habilidades que possam contribuir com nossos projetos"
+                        maxlength="500"></textarea>
+                    <small>Máximo de 500 caracteres</small>
+                </fieldset>
+
+                <!-- Preferências de Contato -->
+                <fieldset>
+                    <legend>Preferências de Contato</legend>
+
+                    <p>Como prefere ser contatado? *</p>
+                    <label>
+                        <input type="checkbox" name="contatoEmail" value="email" checked>
+                        E-mail
+                    </label>
+                    <label>
+                        <input type="checkbox" name="contatoTelefone" value="telefone">
+                        Telefone
+                    </label>
+                    <label>
+                        <input type="checkbox" name="contatoWhatsapp" value="whatsapp">
+                        WhatsApp
+                    </label>
+
+                    <p>Deseja receber nossa newsletter? *</p>
+                    <label>
+                        <input type="radio" name="newsletter" value="sim" required>
+                        Sim
+                    </label>
+                    <label>
+                        <input type="radio" name="newsletter" value="nao">
+                        Não
+                    </label>
+                </fieldset>
+
+                <!-- Mensagem Adicional -->
+                <fieldset>
+                    <legend>Mensagem Adicional (Opcional)</legend>
+
+                    <label for="mensagem">Deixe sua mensagem</label>
+                    <textarea 
+                        id="mensagem" 
+                        name="mensagem" 
+                        rows="6" 
+                        placeholder="Conte-nos mais sobre suas motivações para participar ou qualquer outra informação que considere relevante"
+                        maxlength="1000"></textarea>
+                    <small>Máximo de 1000 caracteres</small>
+                </fieldset>
+
+                <!-- Termos e Condições -->
+                <fieldset>
+                    <legend>Termos e Condições</legend>
+
+                    <label>
+                        <input type="checkbox" name="termos" required>
+                        Li e aceito os <a href="#" target="_blank">Termos de Uso</a> e a <a href="#" target="_blank">Política de Privacidade</a> *
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="lgpd">
+                        Autorizo o uso dos meus dados pessoais conforme a Lei Geral de Proteção de Dados (LGPD) *
+                    </label>
+                </fieldset>
+
+                <!-- Botões -->
+                <div>
+                    <button type="submit">Enviar Cadastro</button>
+                    <button type="reset">Limpar Formulário</button>
+                </div>
+
+                <p><small>* Campos obrigatórios</small></p>
+            </form>
+        </section>
+
+        <!-- Informações Adicionais -->
+        <section>
+            <h2>O que acontece depois do cadastro?</h2>
+            <img src="imagens/processo-cadastro.jpg" alt="Processo de cadastro" width="500">
+            
+            <article>
+                <h3>1. Recebimento e Análise</h3>
+                <p>Nossa equipe receberá seu cadastro e analisará suas informações em até 5 dias úteis.</p>
+            </article>
+
+            <article>
+                <h3>2. Contato Inicial</h3>
+                <p>Entraremos em contato por e-mail ou telefone para agendar uma conversa e conhecer melhor suas expectativas.</p>
+            </article>
+
+            <article>
+                <h3>3. Orientação e Treinamento</h3>
+                <p>Para voluntários, oferecemos uma sessão de orientação sobre nossos projetos e metodologias de trabalho.</p>
+            </article>
+
+            <article>
+                <h3>4. Início das Atividades</h3>
+                <p>Você será direcionado para o projeto mais adequado ao seu perfil e começará a fazer a diferença!</p>
+            </article>
+        </section>
+
+        <!-- Dúvidas Frequentes -->
+        <section>
+            <h2>Dúvidas Frequentes</h2>
+            
+            <article>
+                <h3>Preciso ter experiência prévia para ser voluntário?</h3>
+                <p>Não necessariamente. Temos oportunidades para voluntários de todos os níveis de experiência. O mais importante é o compromisso e a vontade de ajudar.</p>
+            </article>
+
+            <article>
+                <h3>Qual é o tempo mínimo de compromisso como voluntário?</h3>
+                <p>Recomendamos um compromisso mínimo de 3 meses para que você possa vivenciar plenamente o projeto e gerar impacto significativo.</p>
+            </article>
+
+            <article>
+                <h3>Posso fazer trabalho voluntário remoto?</h3>
+                <p>Sim! Temos diversas oportunidades de voluntariado remoto, especialmente nas áreas de comunicação, tecnologia e gestão.</p>
+            </article>
+
+            <article>
+                <h3>Como funciona a doação recorrente?</h3>
+                <p>Você pode configurar uma doação mensal automática via débito em conta ou cartão de crédito. Entre em contato conosco para mais informações.</p>
+            </article>
+
+            <article>
+                <h3>Meus dados estão seguros?</h3>
+                <p>Sim! Tratamos todos os dados pessoais com máxima segurança e em conformidade com a LGPD. Seus dados não serão compartilhados com terceiros.</p>
+            </article>
+        </section>
+
+        <!-- Contato Alternativo -->
+        <section>
+            <h2>Prefere falar conosco diretamente?</h2>
+            <img src="imagens/contato-direto.jpg" alt="Atendimento ao público" width="400">
+            
+            <article>
+                <h3>Central de Atendimento</h3>
+                <address>
+                    <p><strong>Telefone:</strong> <a href="tel:+554133334444">(41) 3333-4444</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5541999998888">(41) 99999-8888</a></p>
+                    <p><strong>E-mail:</strong> <a href="mailto:cadastro@institutoesperanca.org.br">cadastro@institutoesperanca.org.br</a></p>
+                    <p><strong>Horário:</strong> Segunda a Sexta, 8h às 18h</p>
+                </address>
+            </article>
+
+            <article>
+                <h3>Visite-nos Pessoalmente</h3>
+                <address>
+                    <p><strong>Instituto Esperança</strong></p>
+                    <p>Rua da Solidariedade, 123 - Centro</p>
+                    <p>Curitiba - PR, 80000-000</p>
+                </address>
+                <img src="imagens/mapa-localizacao.jpg" alt="Mapa de localização" width="400">
+            </article>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <section>
+            <h2>Contato</h2>
+            <address>
+                <p><strong>Instituto Esperança</strong></p>
+                <p>Rua da Solidariedade, 123 - Centro</p>
+                <p>Curitiba - PR, 80000-000</p>
+                <p>Telefone: <a href="tel:+554133334444">(41) 3333-4444</a></p>
+                <p>WhatsApp: <a href="https://wa.me/5541999998888">(41) 99999-8888</a></p>
+                <p>Email: <a href="mailto:contato@institutoesperanca.org.br">contato@institutoesperanca.org.br</a></p>
+            </address>
+        </section>
+
+        <section>
+            <h3>Redes Sociais</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Horário de Atendimento</h3>
+            <p>Segunda a Sexta: 8h às 18h</p>
+            <p>Sábado: 9h às 13h</p>
+        </section>
+
+        <p>&copy; 2024 Instituto Esperança. Todos os direitos reservados.</p>
+        <p>CNPJ: 12.345.678/0001-90</p>
+    </footer>
+</body>
+</html>
