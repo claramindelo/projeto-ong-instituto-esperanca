@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cadastre-se como voluntário ou doador no Instituto Esperança. Faça parte da transformação social.">
     <title>Cadastro - Instituto Esperança</title>
+    <link rel="stylesheet" href="estilos/variables.css">
+    <link rel="stylesheet" href="estilos/layout.css">
+    <link rel="stylesheet" href="estilos/components.css">
+    <link rel="stylesheet" href="estilos/forms.css">
+    <link rel="stylesheet" href="estilos/responsive.css">
 </head>
 <body>
     <!-- Cabeçalho Principal -->
@@ -33,7 +38,7 @@
             <h2>Formulário de Cadastro</h2>
             <img src="imagens/formulario-icon.jpg" alt="Ícone de formulário" width="150">
             
-            <form id="formCadastro">
+            <form id="formCadastro" action="sucesso.html" method="get">
                 <!-- Dados Pessoais -->
                 <fieldset>
                     <legend>Dados Pessoais</legend>
@@ -254,7 +259,7 @@
                     </label>
 
                     <label>
-                        <input type="checkbox" name="lgpd">
+                        <input type="checkbox" name="lgpd" required>
                         Autorizo o uso dos meus dados pessoais conforme a Lei Geral de Proteção de Dados (LGPD) *
                     </label>
                 </fieldset>
