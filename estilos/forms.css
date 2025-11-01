@@ -406,3 +406,114 @@ fieldset select option:hover {
         grid-column: 2;
     }
 }
+
+/* ===== ESTILOS DE VALIDAÇÃO ===== */
+
+/* Campo com erro */
+.form-input.error,
+.form-textarea.error,
+.form-select.error,
+input.error,
+select.error,
+textarea.error {
+    border-color: #f44336 !important;
+    background-color: rgba(244, 67, 54, 0.05);
+}
+
+/* Campo com sucesso */
+.form-input.success,
+.form-textarea.success,
+.form-select.success,
+input.success,
+select.success,
+textarea.success {
+    border-color: #4caf50 !important;
+    background-color: rgba(76, 175, 80, 0.05);
+}
+
+/* Mensagem de erro */
+.form-error {
+    display: block;
+    color: #f44336;
+    font-size: 0.9em;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Animação de erro (shake) */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.error {
+    animation: shake 0.3s ease;
+}
+
+/* Animação de sucesso */
+@keyframes successPulse {
+    0%, 100% {
+        border-color: #4caf50;
+    }
+    50% {
+        border-color: #4caf50;
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    }
+}
+
+.success {
+    animation: successPulse 0.6s ease;
+}
+
+/* Loader do CEP */
+.cep-loader {
+    display: inline-block;
+    margin-left: 10px;
+    color: #2196f3;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Mensagens do CEP */
+.cep-mensagem {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Alertas do formulário */
+.alert {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid;
+}
+
+.alert-error {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #c62828;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+.alert strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.alert ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.alert li {
+    margin-bottom: 5px;
+}
